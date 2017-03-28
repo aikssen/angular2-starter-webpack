@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "Angular 2, TypeScript and Webpack",
   "scripts": {
-    "build": "webpack",
+    "build": "rimraf dist/ && webpack",
     "start": "webpack-dev-server --config webpack.config.js"
   },
   "license": "ISC",
@@ -24,9 +24,18 @@
   },
   "devDependencies": {
     "@types/core-js": "0.9.35",
+    "@types/node": "^7.0.12",
+    "@types/requirejs": "^2.1.28",
+    "angular2-template-loader": "^0.6.2",
+    "copy-webpack-plugin": "^4.0.1",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.6.1",
     "ts-loader": "2.0.1",
     "typescript": "2.2.1",
     "webpack": "2.2.1",
     "webpack-dev-server": "2.4.1"
+  },
+  "engines": {
+    "node": "~6"
   }
 }
